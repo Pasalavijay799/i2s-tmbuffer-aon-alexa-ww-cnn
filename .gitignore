@@ -1,0 +1,66 @@
+# =============================================================================
+# Ambient Scientific GPX10PRO - i2s-tmbuffer-aon-alexa-ww-cnn
+# =============================================================================
+
+# ---- Build artifacts ----
+Debug/
+Debug_ModelReferesh/
+*.bin
+*.elf
+*.map
+*.o
+*.d
+*.lst
+*.hex
+*.axf
+*.out
+
+# ---- Eclipse IDE ----
+.settings/
+.project
+.project.bak
+.cproject
+.metadata/
+RemoteSystemsTempFiles/
+
+# ---- gpxCLITool temp output (timestamped compiler runs) ----
+test/temp/GC_*/
+training_tool_chain/python/temp/
+
+# ---- Python virtual environments ----
+test/tf_env/
+training_tool_chain/python/venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+env/
+venv/
+
+# ---- Large datasets (download separately) ----
+training_tool_chain/python/_tmp_collect/
+training_tool_chain/python/Dataset/
+training_tool_chain/python/npy-files/
+training_tool_chain/python/audio_txt/
+*.tar.gz
+*.zip
+
+# ---- Model training intermediates ----
+*.tflite
+training_tool_chain/python/*.png
+
+# ---- gpxCLITool stdin/log files ----
+test/gpx_stdin.txt
+test/model_log.txt
+
+# ---- OS junk ----
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.swo
+*~
+
+# ---- J-Link / debugger ----
+*.jlink
+JLinkLog.txt

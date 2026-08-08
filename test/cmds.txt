@@ -1,0 +1,15 @@
+
+ 
+live mode:
+gpxCLITool.exe -m wake-word-model.h5 -d ../i2s-tmbuffer-aon-alexa-ww-cnn/ -p 5  -w 16 -o 16  -s ArmShift
+
+gpxCLITool.exe -m new.h5 -d ../i2s-tmbuffer-aon-alexa-ww-cnn/ -p 5  -w 16 -o 16  -s ArmShift
+
+gpxCLITool.exe -m hey_mynaa.h5 -d ../i2s-tmbuffer-aon-alexa-ww-cnn/ -p 5  -w 16 -o 16  -s ArmShift
+gpxCLITool.exe -m new_model.h5 -d ../i2s-tmbuffer-aon-alexa-ww-cnn/ -p 5  -w 16 -o 16  -s ArmShift
+
+
+
+gpxCLITool.exe -m try.h5 -d ../i2s-tmbuffer-aon-alexa-ww-cnn/ -p 5  -w 16 -o 16  -s ArmShift
+
+		

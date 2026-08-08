@@ -1,0 +1,213 @@
+
+--- PAGE 1 ---
+1
+EdgeSphere Tool
+Guide
+Ambient Scientific
+March 2026
+
+--- PAGE 2 ---
+2
+
+--- PAGE 3 ---
+3
+Version No.
+Date
+Author/Editor
+Details of Change
+Beta 1.0.1
+21 Apr 2025
+Ambient Scientific
+Tool Guide Release
+Release 2.0.0
+18 Mar 2026
+Ambient Scientific
+Added Deployer &
+Compatibility
+Release 2.0.1
+15 April 2026
+Ambient Scientific
+Added Deployer &
+Compatibility
+
+--- PAGE 4 ---
+4
+Table Of Contents
+1. Introduction···························································································· 5
+1.1. Launching EdgeSphere······································································ 5
+2. EdgeSphere Tab Overview······································································ 6
+2.1. How It Works··················································································6
+2.2. Firmware Deployer·········································································7
+2.2.1. EdgeSphere Bin Flash for Data Collection······························ 7
+2.2.2. Generic Bin Flash for Application Tests··································9
+2.3. Data Collection············································································· 10
+2.3.1. Audio Data Collection···························································10
+2.3.2. Image Data Collection··························································11
+2.4. Result Log····················································································· 13
+2.5. Model Compatibility·····································································14
+
+--- PAGE 5 ---
+5
+1. Introduction
+EdgeSphere Tool for GPX AI Processor
+The EdgeSphere Tool is a utility tool built for the GPX AI Processor, focusing on streamlining audio
+and video data collection, firmware deployment, and model compatibility at the edge. In this
+version, EdgeSphere offers a clean and efficient interface that allows users to capture audio and
+video samples, making it ideal for building datasets tailored to edge AI applications.
+1.1.
+Launching EdgeSphere
+
+You can launch it by navigating to the directory where you installed the tool.
+(For example, in this case, C:\EdgeSphere [See Fig 1])
+
+After successful installation, you’ll find the EdgeSphere application along with some
+necessary files in the installation folder.
+
+To launch the tool, simply double-click or right-click and select “Open” on the
+EdgeSphere application.
+Fig 1
+
+--- PAGE 6 ---
+6
+2. EdgeSphere Tab Overview
+2.1.
+How It Works
+The "How It Works" tab provides a quick overview of the tool’s functionality. It gives
+users a clear understanding of the workflow through reference cards that explain each
+step involved in the data collection process.
+Fig 2
+
+--- PAGE 7 ---
+7
+2.2.
+Firmware Deployer
+Fig 3
+2.2.1.
+EdgeSphere Bin Flash for Data Collection
+Using the Firmware deployer, the user can easily flash the project depending upon
+which chip is being used, which is required for data collection.
+edge-sphere-embedded-project-GPX-10.bin for GPX 10.
+edge-sphere-embedded-project-GPX-10-Pro.bin for GPX 10 Pro.
+Locate the ‘edge-sphere-embedded-project-GPX-10.bin’ or ‘edge-sphere-embedded-
+project-GPX-10-Pro.bin’ files in the installed directory (e.g., C:\EdgeSphere) [See fig 4].
+
+--- PAGE 8 ---
+8
+Fig 4
+Copy the path or use the “Browse” button in the deployer to select the bin file
+Select the chip type, using ‘GPX-10’ or ‘GPX-10 Pro’.
+Make sure the hardware connections are done, as the JTAG connection is mandatory
+for flashing. Click on “Upgrade Firmware”, and the Flash should begin.
+After completion, if the serial terminal is connected, a flash verification can be done by
+observing the application prints [See fig 5].
+
+--- PAGE 9 ---
+9
+Fig 5
+2.2.2.
+Generic Bin Flash for Application Tests
+The steps for general use of Firmware Deployer remain the same; just select the .bin
+file the user wants to flash to the DVK, verify hardware connections, and click on the
+“Upgrade Firmware” button.
+
+--- PAGE 10 ---
+10
+2.3.
+Data Collection
+
+This tab lists two labels: Audio and Vision, on the left-hand side.
+
+These sections allow you to collect respective data samples from the connected GPX10
+device.
+Fig 6
+Fig 7
+2.3.1.
+Audio Data Collection
+
+--- PAGE 11 ---
+11
+Fig 8
+On the left side, you'll find a minimal UI designed to guide the user through the
+recording process. It provides visual cues to help users know when to speak and
+ensures accurate timing during audio capture. [See fig 8]
+On the right side, there are several input fields that the user needs to fill out before
+starting the recording. Each field is accompanied by a helpful tool tip that explains
+what information is required.[See fig 8]
+The tool collects audio data using the on-board I2S microphone with a sampling rate
+of 8 kHz, ensuring efficient and lightweight data capture suitable for edge AI
+applications.
+For e.g., Person Name: Ambient, Word to record: Hello, Duration of sample in
+seconds: 1, Number of samples: 10
+Once the data collection has been completed, you can see the result in the result log,
+or you can navigate to the directory “C:\EdgeSphere\Collected_Data\Audio” to see
+the collected audio samples in .wav format.
+2.3.2.
+Image Data Collection
+
+--- PAGE 12 ---
+12
+Fig 9
+
+On the left side, you'll see a minimal UI featuring a live streaming window and a Capture
+button. This allows users to preview the video feed in real time and capture images when
+ready. [See fig 9]
+
+On the right side, users are required to fill in several input fields, each accompanied by a
+tool tip providing guidance on what information to enter. [See fig 9]
+
+The tool supports image capture from the on-board HM01B0 camera, which is an I2C-
+based camera module. Additionally, users can choose to capture images using a laptop
+webcam or any external USB webcam connected to the system.
+
+When capturing the image, the image save directory will be displayed below the capture
+button.
+
+--- PAGE 13 ---
+13
+2.4.
+Result Log
+Fig 10
+
+Initially, the window will display “No files found”. Once you collect audio samples, the data
+will appear here in the form of an Excel sheet with a timeline view representing each
+recorded entry. [See fig 10]
+
+You can play back the recorded samples, transcribe audio data, download the files, and
+delete them once they are no longer needed — all directly from this interface.
+
+In the top-left corner, there is a slider labeled with three transcription model options:
+o
+Small – Fastest processing, but with lower accuracy.
+o
+Medium – Balanced in speed and accuracy.
+o
+Large – Slower but provides the most accurate transcription results.
+
+Based on your requirements (speed vs. accuracy), you can slide between these models to
+transcribe the recorded data accordingly.
+
+--- PAGE 14 ---
+14
+2.5.
+Model Compatibility
+Fig 11
+
+Select a model by either dragging and dropping or by clicking and browsing.[See fig 11]
+Fig 12
+
+--- PAGE 15 ---
+15
+
+If the model is compatible, no Layer/Operator issues are displayed, and the model is shown
+to be compatible with GPX Chips. [See fig 12]
+Fig 13
+
+If the model is not compatible, Layer/Operator issues are displayed, and to fix them,
+suggestions can be viewed by clicking “See more info”. [See fig 13]
+
+--- PAGE 16 ---
+16
+Fig 14
+
+Along with that user can view GPX supported operators and parameters in the “Show
+Operators” section on the left-hand side. [See fig 14]
